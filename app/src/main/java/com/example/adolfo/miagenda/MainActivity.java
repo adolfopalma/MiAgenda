@@ -88,6 +88,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(it);
             return true;
         }
+        if (id == R.id.preferencias){
+            Intent prefe = new Intent(this, Preferencias.class);
+            startActivity(prefe);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

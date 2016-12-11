@@ -209,7 +209,8 @@
         android:layout_alignTop="@+id/bBaja"
         android:layout_toRightOf="@+id/bBaja"
         android:layout_toEndOf="@+id/bBaja"
-        android:id="@+id/bAcciones" />
+        android:id="@+id/bAcciones"
+        android:onClick="irAcciones" />
 
 
 </RelativeLayout>

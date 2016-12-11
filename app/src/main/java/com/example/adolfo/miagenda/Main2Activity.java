@@ -1,10 +1,13 @@
 package com.example.adolfo.miagenda;
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -18,6 +21,8 @@ public class Main2Activity extends AppCompatActivity {
     EditText email;
     EditText web;
     ImageView v;
+    Intent i;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,15 @@ public class Main2Activity extends AppCompatActivity {
         }
 
 
+    }
+
+
+    public void irAcciones(View v) {
+        Intent i = new Intent(getApplicationContext(), Acciones.class);
+        i.putExtra("telefono",telefono.getText().toString());
+        i.putExtra("email",email.getText().toString());
+        i.putExtra("web",web.getText().toString());
+        startActivity(i);
     }
 
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="DG"
+        android:title="Opciones de toma de fotos"/>
+
+    <EditTextPreference
+        android:key="Toma de fotos"
+        android:title="Toma de fotos"
+        android:summary="Indica de donde quieres coger la foto"
+        android:defaultValue="50"/>
+
+    <ListPreference
+        android:key="Tipostelefonos"
+        android:title="Tipos de telefono del sistema"
+        android:dialogTitle="Selecciona lista de telefonos"
+
+        android:defaultValue="3"/>
+
+    <ListPreference
+        android:key="Tipostelefonos"
+        android:title="Tipos de telefono del sistema"
+        android:dialogTitle="Selecciona lista de telefonos"
+        android:entries="@android:array/phoneTypes"
+        android:entryValues="@android:array/phoneTypes"
+        android:defaultValue="3"/>
+
+</PreferenceScreen>
