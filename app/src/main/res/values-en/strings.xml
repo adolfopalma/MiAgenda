@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My contact list</string>
+    <string name="modificar_contacto">Modify Contact</string>
+    <string name="nuevo_contacto">New Contact</string>
+    <string name="preferencias">Preferences</string>
+    <string name="title_activity_acciones">Actions</string>
+    <string name="nombre">Name</string>
+    <string name="telefono">Telephone</string>
+    <string name="foto">Picture</string>
+    <string name="direccion">Address</string>
+    <string name="email">E-mail address</string>
+    <string name="web">Web Page</string>
+    <string name="modificar">Modify</string>
+    <string name="baja">Delete</string>
+    <string name="añadir">Add new contact</string>
+    <string name="contactoAñadido">Contact added correctly</string>
+    <string name="contactoBorrado">Contact has been successfully deleted</string>
+    <string name="contactoModificado">Contact changed successfully</string>
+    <string name="tomarFoto">Take photo of the camera</string>
+    <string name="fotoGuardada">Photo saved correctly</string>
+    <string name="telefonoGuardado">Phone added to the database</string>
+    <string name="error">You must fill in at least the name and phone fields</string>
+</resources>

@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public class Elemento implements Serializable {
     private static final long serialVersionUID = 1L;
-    private long id;
+    private int id;
     String telefono,rFoto, email, direccion,web;
     private String nombre;
 
@@ -18,7 +18,7 @@ public class Elemento implements Serializable {
         this.telefono = telefono;
         this.rFoto = rFoto;
     }
-    public Elemento(String nombre,long id,String telefono,String rFoto,String email,String direccion,String web){
+    public Elemento(String nombre,int id,String telefono,String rFoto,String email,String direccion,String web){
         this.nombre = nombre;
         this.id = id;
         this.telefono = telefono;
@@ -30,7 +30,7 @@ public class Elemento implements Serializable {
 
     public String getNombre(){return nombre;}
 
-    public long getId(){return id;}
+    public int getId(){return id;}
 
     public String getTelefono(){return telefono; }
 
@@ -43,7 +43,7 @@ public class Elemento implements Serializable {
     public String getFoto(){return rFoto;}
 
 
-    public void setId(long id){this.id = id;}
+    public void setId(int id){this.id = id;}
 
     public void setNombre(String nombre){this.nombre = nombre;}
 

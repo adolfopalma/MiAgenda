@@ -67,7 +67,8 @@ public class Adaptador extends BaseAdapter {
 
 
         ImageView im = (ImageView) view.findViewById(R.id.imagen);
-        File img = new File(Environment.getExternalStorageDirectory() + lista.get(position).getFoto());
+       // File img = new File(Environment.getExternalStorageDirectory() + lista.get(position).getFoto());
+        File img = new File(lista.get(position).getFoto());
 
         if (img.exists()) {
             try{

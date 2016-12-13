@@ -17,24 +17,13 @@
         android:text="¿Que deseas hacer?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
         android:id="@+id/textView"
         android:textColor="@android:color/black"
         android:textStyle="normal|bold"
         android:textSize="18sp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Llamar por telefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:id="@+id/bLlamar"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="Llamada" />
+        android:layout_alignRight="@+id/imagenProv"
+        android:layout_alignEnd="@+id/imagenProv" />
 
     <Button
         android:text="Mandar un email"
@@ -47,16 +36,6 @@
         android:onClick="mandarEmail" />
 
     <Button
-        android:text="Tomar foto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bTomar"
-        android:layout_below="@+id/bWeb"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="foto" />
-
-    <Button
         android:text="Ir a web/blog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,13 +45,14 @@
         android:layout_alignParentStart="true"
         android:onClick="irWeb" />
 
-    <ImageView
-        app:srcCompat="@drawable/silueta"
-        android:id="@+id/imagenProv"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/bTomar"
-        android:layout_centerHorizontal="true"
-        android:layout_width="150dp"
-        android:layout_height="150dp" />
+    <Button
+        android:text="Llamar por telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bLlamar"
+        android:onClick="Llamada"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

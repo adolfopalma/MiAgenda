@@ -1,7 +1,23 @@
 <resources>
-    <string name="app_name">MiAgenda</string>
+    <string name="app_name">Mi Agenda</string>
     <string name="nuevo_contacto">Nuevo Contacto</string>
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="modificar_contacto">Modificar Contacto</string>
     <string name="preferencias">Preferencias</string>
     <string name="title_activity_acciones">Acciones</string>
+    <string name="nombre">Nombre</string>
+    <string name="telefono">Telefono</string>
+    <string name="foto">Foto</string>
+    <string name="direccion">Dirección</string>
+    <string name="email">Dirección e-mail</string>
+    <string name="web">Pagina Web</string>
+    <string name="modificar">Modificar</string>
+    <string name="baja">Baja</string>
+    <string name="añadir">Añadir nuevo contacto</string>
+    <string name="contactoAñadido">Contacto añadido correctamente</string>
+    <string name="contactoBorrado">El contacto se ha borrado correctamente</string>
+    <string name="contactoModificado">El contacto se ha modificado correctamente</string>
+    <string name="tomarFoto">Tomar foto de la camara</string>
+    <string name="fotoGuardada">Foto guardada correctamente</string>
+    <string name="telefonoGuardado">Telefono añadadido a la base de datos</string>
+    <string name="error">Debes rellenar al menos los campos nombre y telefono</string>
 </resources>

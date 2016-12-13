@@ -29,10 +29,15 @@
         </activity>
         <activity
             android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
+            android:label="@string/modificar_contacto"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Nuevo_Contacto" />
-        <activity android:name=".Preferencias" />
+        <activity
+            android:name=".Nuevo_Contacto"
+            android:label="@string/nuevo_contacto"/>
+
+        <activity
+            android:name=".Preferencias"
+            android:label="@string/preferencias"/>
         <activity
             android:name=".Acciones"
             android:label="@string/title_activity_acciones"

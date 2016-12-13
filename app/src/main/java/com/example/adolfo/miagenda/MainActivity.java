@@ -1,6 +1,7 @@
 package com.example.adolfo.miagenda;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Vector;
@@ -21,8 +23,9 @@ public class MainActivity extends AppCompatActivity {
     static Adaptador a;
     static ArrayList<Elemento> arrayList = new ArrayList();
     ListView listview;
-    Intent it;
+    Intent it, it2;
     Vector<String> arrayUrls = new Vector<String>();
+    static public  SharedPreferences prefe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
+        prefe = getSharedPreferences("com.example.adolfo.miagenda_preferences", MODE_PRIVATE);
         listview = (ListView) findViewById(android.R.id.list);
         arrayList.clear();
 
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
                 Elemento el = (Elemento) listview.getAdapter().getItem(position);
 // hacer algo
                 it = new Intent(getApplicationContext(), Main2Activity.class);
+                it2 = new Intent(getApplicationContext(), Nuevo_Contacto.class);
+                it2.putExtra("id",arrayList.get(position).getId());
                 it.putExtra("objeto", el);
                 it.putExtra("posicion", position);
                 it.putExtra("nombre",arrayList.get(position).getNombre());
@@ -108,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 String[]camposContactos = {"idcontacto","nombre","direccion","email","webblog"};
                 String[]camposTelefonos = {"idTelefonos", "telefono", "idContacto"};
                 String[]camposFotos = {"idFoto", "nomFichero", "idContacto"};
-                Cursor cursor = db.query("contactos",camposContactos,null,null,null,null,null,null);
+                Cursor cursor = db.query("contactos",camposContactos,null,null,null,null,"nombre",null);
 
 
 
@@ -121,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
                     arrayList.add(new Elemento(cursor.getString(1),cursor.getInt(0),telef.getString(1),fotos.getString(1),cursor.getString(3),cursor.getString(2),cursor.getString(4)));
 
                 }
+
 
                 db.setTransactionSuccessful();
 

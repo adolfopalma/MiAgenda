@@ -1,20 +1,29 @@
 package com.example.adolfo.miagenda;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.preference.SwitchPreference;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.io.File;
 
 public class Acciones extends AppCompatActivity {
     Intent i;
     Bundle extras;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +33,7 @@ public class Acciones extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         extras = getIntent().getExtras();
+
 
     }
 
@@ -53,28 +63,7 @@ public class Acciones extends AppCompatActivity {
 
     }
 
-    private static final int CAMARA = 1;
-    private static final int GALERIA = 2;
 
-    public void foto(View v) {
-        i = new Intent("android.media.action.IMAGE_CAPTURE");
-        startActivityForResult(i, CAMARA);
-    }
 
-    public void galeria(View v) {
-        i = new Intent(Intent.ACTION_PICK,
-                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(i, GALERIA);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == CAMARA && resultCode == RESULT_OK && data != null) {
-            Bitmap imagen = (Bitmap) data.getExtras().get("data");
-            ImageView v = (ImageView)findViewById(R.id.imagenProv);
-            v.setImageBitmap(imagen);
-        }
-
-    }
 
 }
